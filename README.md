@@ -1,5 +1,5 @@
 
-# 🎵 Musicforfree – Web Music Player
+# 🎵 MusicforEveryone – Web Music Player
 
 A sleek, responsive web-based music player inspired by Spotify, built using HTML, CSS, and JavaScript. Users can browse a sample playlist, play/pause songs, and view real-time updates of the currently playing track.
 
