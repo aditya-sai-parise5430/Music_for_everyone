@@ -52,5 +52,5 @@ A sleek, responsive web-based music player inspired by Spotify, built using HTML
 
 ## 👤 Author
 
-**Sasidhar Sai**
+**Aditya Sai**
 Front-end enthusiast passionate about clean UIs and user experience.
