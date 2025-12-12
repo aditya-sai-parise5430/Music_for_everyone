@@ -38,7 +38,59 @@ A sleek and responsive web-based music player inspired by Spotify, built using *
 └── songs/              # (Optional) Directory for storing song files
 ```
 
+
+## 🔧 Backend Overview (Node.js + Express + MongoDB)
+
+The backend of Musicforfree is built using Node.js and Express.js with MongoDB Atlas as the cloud database. 
+It exposes REST APIs that the frontend uses to fetch songs and stream audio files.
+
+### ✨ Key Backend Features
+- File upload system using Multer (supports MP3 + image uploads)
+- MongoDB Atlas database for storing song metadata
+- REST APIs for uploading and fetching songs
+- Static hosting of uploaded audio and cover images
+- Clean folder structure following industry standards
+
+### 📁 Backend Folder Structure
+server/
+  ├── routes/
+  │     └── songRoutes.js      # API endpoints for uploading and fetching songs
+  ├── models/
+  │     └── Song.js            # Mongoose schema for song metadata
+  ├── uploads/
+  │     ├── songs/             # Uploaded MP3 files
+  │     └── covers/            # Uploaded cover images
+  ├── server.js                # Main Express server configuration
+  ├── package.json
+  └── .env                     # MongoDB URI and environment variables
+
+### 🚀 REST API Endpoints
+
+**POST /api/songs**
+- Upload a new song (mp3 + cover + metadata)
+- Validates file types using Multer
+- Saves metadata to MongoDB
+
+**GET /api/songs**
+- Returns an array of all uploaded songs
+- Frontend uses this to dynamically render the music list
+
+**GET /api/songs/:id**
+- Fetch a single song by ID
+
+### 🗂️ Database Schema (Song Document)
+Each song stored in MongoDB contains:
+
+- `title` – Song name
+- `artist` – Artist name
+- `duration` – Duration in seconds
+- `audioUrl` – Storage path of the MP3 file
+- `coverUrl` – Storage path of the cover image
+- `createdAt` – Timestamp
+
 ---
+
+
 
 ## 🚀 Getting Started
 
